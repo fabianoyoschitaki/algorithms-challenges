@@ -16,13 +16,7 @@ public class MainDynamicProgrammingFibonacci {
 
 	private static Integer fibDyn(int n, Integer[] fibCache) {
 		CONT++;
-		if (fibCache[n] != null)  
-			return fibCache[n];
-		
-		if (n <= 1)
-			fibCache[n] = n;
-		else 
-			fibCache[n] = fibDyn(n-1, fibCache) + fibDyn(n-2, fibCache);
-		return fibCache[n];
+		if (fibCache[n] != null) return fibCache[n];
+		return fibCache[n] = n <= 1 ? n : fibDyn(n-1, fibCache) + fibDyn(n-2, fibCache);
 	}
 }
