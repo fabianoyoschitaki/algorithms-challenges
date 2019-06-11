@@ -1,5 +1,5 @@
 
-public class MainDynamicProgrammingFibonacci {
+public class MainDynamicProgrammingFibonacci2 {
 
 	static int EXECUTIONS;
 	
@@ -16,7 +16,11 @@ public class MainDynamicProgrammingFibonacci {
 
 	private static Integer fibDyn(int n, Integer[] fibCache) {
 		EXECUTIONS++;
-		if (fibCache[n] != null) return fibCache[n];
-		return fibCache[n] = n <= 1 ? n : fibDyn(n-1, fibCache) + fibDyn(n-2, fibCache);
+		if (n <= 1) {
+			return n;
+		} else if (fibCache[n] == null) {
+			fibCache[n] = fibDyn(n-1, fibCache) + fibDyn(n -2, fibCache);
+		}
+		return fibCache[n];
 	}
 }
