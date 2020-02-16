@@ -68,13 +68,10 @@ public class MainIsThisABinarySearchTree {
 		// /\
 		// 0 4
 
-		// System.out.println("should return false:" + isBST(head1)); // should return
-		// false
-		// System.out.println("should return false:" + isBST(head2)); // should return
-		// false
+		System.out.println("should return false:" + isBST(head1)); // should return false
+		System.out.println("should return false:" + isBST(head2)); // should return false
 		System.out.println("should return true:" + isBST(head3)); // should return true
-		// System.out.println("should return false:" + isBST(head4)); // should return
-		// false
+		System.out.println("should return false:" + isBST(head4)); // should return false
 	}
 
 	// Implement your function below.
