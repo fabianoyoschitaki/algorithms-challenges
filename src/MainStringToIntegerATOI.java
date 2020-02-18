@@ -56,7 +56,6 @@ public class MainStringToIntegerATOI {
 	}
 
 	private static int atoi(String str) {
-		int i = 0;
 		// remove spaces in the start and end
 		str = str.trim();
 		// if empty is left, then no conversion to be done
@@ -66,6 +65,7 @@ public class MainStringToIntegerATOI {
 		if (Character.isLetter(str.charAt(0)))
 			return 0;
 
+		int i = 0;
 		// gets sign (first character)s
 		char sign = '+'; // indicates positive
 		if (str.charAt(0) == '-') {
@@ -97,11 +97,8 @@ public class MainStringToIntegerATOI {
 		}
 
 		// check whether we overflowed result to return Integer.MAX_VALUE or Integer.MIN_VALUE
-		if (posOverflow && sign == '+')
-			result = Integer.MAX_VALUE;
-		if (posOverflow && sign == '-')
-			result = Integer.MIN_VALUE;
-		
+		if (posOverflow)
+			return sign == '+' ? Integer.MAX_VALUE : Integer.MIN_VALUE;
 		// else returns result
 		return sign == '-' ? -result : result;
 	}
