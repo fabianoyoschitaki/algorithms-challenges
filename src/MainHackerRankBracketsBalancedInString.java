@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-class MainBracketsBalancedInString {
+class MainHackerRankBracketsBalancedInString {
 	public static void main(String[] args) {
-		MainBracketsBalancedInString m = new MainBracketsBalancedInString();
+		MainHackerRankBracketsBalancedInString m = new MainHackerRankBracketsBalancedInString();
 		System.out.println("(a[0]+b[2c[6]]){24+53}            passed:" + m.isStringBalanced("(a[0]+b[2c[6]]){24+53}"));
 		System.out.println("f(e(d))                    passed:" + m.isStringBalanced("f(e(d))"));
 		System.out.println("[()]{}([])                 passed:" + m.isStringBalanced("[()]{}([])"));

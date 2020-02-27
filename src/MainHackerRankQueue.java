@@ -1,5 +1,5 @@
 
-public class MainHackerrankQueue {
+public class MainHackerRankQueue {
 	public static void main(String[] args) {
 		Queue queue = new Queue();
 		queue.add(0);
