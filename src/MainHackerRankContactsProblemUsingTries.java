@@ -25,14 +25,32 @@
 public class MainHackerRankContactsProblemUsingTries {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		TrieNode root = new TrieNode("");
+		root.add("fabiano");
+		root.add("fabio");
+		root.add("fabia");
+		root.add("facil");
+		root.add("faca");
+		root.add("foi");
+		root.add("a");
+		root.add("ab");
+		root.findCount("");
+		root.findCount("a");
+		root.findCount("ab");
+		root.findCount("fab");
+		root.findCount("fa");
+		root.findCount("fabx");
 	}
-
 }
 
 class TrieNode {
+	
+	public TrieNode(String me) {
+		this.me = me;
+	}
 	private static final int NUMBER_OF_CHARACTERS = 26;
+	String me;
+	int size = 0;
 	
 	// children will be null if there's no contact after it
 	private TrieNode [] children = new TrieNode[NUMBER_OF_CHARACTERS];
@@ -48,13 +66,51 @@ class TrieNode {
 		children[getCharIndex(c)] = node;
 	}
 	
+	public void add(String s) {
+		System.out.println("Added: " + s);
+		add(s, 0);
+	}
+	
+	/**
+	 * Recursive adding chars in the trie
+	 * 
+	 * @param s
+	 * @param index
+	 */
 	private void add(String s, int index) {
-		
+		size++;
+		if (index == s.length()) 
+			return;
+		char current = s.charAt(index);
+		TrieNode child = getNode(current);
+		if (child == null) {
+			child = new TrieNode(String.valueOf(current));
+			setNode(current, child);
+		}
+		child.add(s, index+1);
 	}
 	
-	public int findCount(String s, int index) {
-		
+	/**
+	 * Returns number of elements that starts with string
+	 * 
+	 * @param s
+	 * @param index
+	 * @return
+	 */
+	public void findCount(String s) {
+		System.out.println("FindCount for: " + s + " is " + findCount(s, 0));
 	}
 	
+	private int findCount(String s, int index) {
+		if (index == s.length()) {
+			return size;
+		}
+		char current = s.charAt(index);
+		TrieNode child = getNode(current);
+		if (child == null) {
+			return 0;
+		}
+		return child.findCount(s, index+1);
+	}
 }
 
