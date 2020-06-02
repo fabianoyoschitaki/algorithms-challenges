@@ -107,10 +107,11 @@ public class MainGCodeJam20201BRoundExpogo {
         }
     }
 
+    //TODO not working
     private static String expogo(int x, int y) {
         if ((Math.abs(x) + Math.abs(y)) % 2 == 0) {
             return "IMPOSSIBLE";
         }
-        return expogoRecursive(x, y);
+        return expogo(x, y);
     }
 }

@@ -53,9 +53,11 @@ public class MainHackerRankFindRunningMedianUsingHeaps {
 			int currentNumber = array[i];
 			// modularize your code! shows good styling, makes code easier to test and makes
 			// code easier for you to write
-			addNumber(currentNumber, lowers, highers);
-			rebalance(lowers, highers);
-			medians[i] = getMedian(lowers, highers);
+//			TODO
+//			addNumber(currentNumber, lowers, highers);
+//			rebalance(lowers, highers);
+//			medians[i] = getMedian(lowers, highers);
 		}
+        return medians;
 	}
 }
