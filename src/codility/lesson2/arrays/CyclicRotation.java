@@ -1,4 +1,4 @@
-package codility.arrays;
+package codility.lesson2.arrays;
 
 /**
  * An array A consisting of N integers is given. Rotation of the array means

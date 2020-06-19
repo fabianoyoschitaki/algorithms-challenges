@@ -1,4 +1,4 @@
-package codility.iterations;
+package codility.lesson1.iterations;
 
 /**
  * A binary gap within a positive integer N is any maximal sequence of
