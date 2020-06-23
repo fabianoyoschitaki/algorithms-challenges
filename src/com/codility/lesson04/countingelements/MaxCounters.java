@@ -1,9 +1,5 @@
 package com.codility.lesson04.countingelements;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * You are given N counters, initially set to 0, and you have two possible
  * operations on them:
@@ -50,7 +46,6 @@ import java.util.Set;
  * 
  * @author fabiano
  * 
- *         https://funnelgarden.com/maxcounters-codility-solution/
  */
 public class MaxCounters {
     public int[] solution(int N, int[] A) {
