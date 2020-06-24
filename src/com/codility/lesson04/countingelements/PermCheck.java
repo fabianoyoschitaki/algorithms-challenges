@@ -2,7 +2,6 @@ package com.codility.lesson04.countingelements;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * A non-empty array A consisting of N integers is given.

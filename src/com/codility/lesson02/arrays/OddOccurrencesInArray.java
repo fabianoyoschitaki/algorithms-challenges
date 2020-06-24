@@ -1,8 +1,5 @@
 package com.codility.lesson02.arrays;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * A non-empty array A consisting of N integers is given. The array contains an
  * odd number of elements, and each element of the array can be paired with
