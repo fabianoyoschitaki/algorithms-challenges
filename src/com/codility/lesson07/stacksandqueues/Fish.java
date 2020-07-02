@@ -69,6 +69,32 @@ import java.util.Stack;
  */
 public class Fish {
     public int solution(int[] A, int[] B) {
-        // write your code in Java SE 8
+        // we only need upstream fishes
+        Stack<Integer> upstream = new Stack<>();
+        int alive = 0;
+        for (int i = 0; i < A.length; i++){
+            if (B[i] == 0){ // downstream
+                // current fish is going downstream and there's no upstream fish to encounter, it'll be alive 
+                if (upstream.empty()){
+                    alive++;
+                } 
+                // current fish is going downstream and there's an upstream fish, they'll fight 
+                else {
+                    // if current dowstream if bigger, then remove all smaller upstream fishes until it's not bigger anymore (or all upstream fishes are eaten) 
+                    while (!upstream.empty() && upstream.peek() < A[i]){
+                        upstream.pop(); // kill poor upstream fish
+                    }
+                    // if downstream fish ate all fishes, then he'll be gone (and alive)
+                    if (upstream.empty()){
+                        alive++;
+                    }
+                }
+            } else { // add upstream to stack
+                upstream.push(A[i]);
+            }
+        }
+        // here we sum all downstream fishes (either the alone ones who never fought or the ones who did win the battle + the upstream following the same situation:
+        // <-- <--  --> --> -->
+        return alive + upstream.size();
     }
 }
