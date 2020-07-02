@@ -1,5 +1,7 @@
 package com.codility.lesson07.stacksandqueues;
 
+import java.util.Stack;
+
 /**
  * A string S consisting of N characters is called properly nested if:
  * 
@@ -28,5 +30,17 @@ package com.codility.lesson07.stacksandqueues;
  *
  */
 public class Nesting {
-
+    public int solution(String S) {
+        int openings = 0; 
+        for (Character c : S.toCharArray()) {
+            if (c.equals('(')) {
+                openings++;
+            } else if (c.equals(')')){
+                if (openings == 0)
+                    return 0;
+                openings--;
+            }
+        }
+        return openings == 0 ? 1 : 0; 
+    }
 }
