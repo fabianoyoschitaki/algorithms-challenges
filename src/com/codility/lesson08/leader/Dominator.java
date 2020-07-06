@@ -2,7 +2,6 @@ package com.codility.lesson08.leader;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 
 /**
  * An array A consisting of N integers is given. The dominator of array A is the
