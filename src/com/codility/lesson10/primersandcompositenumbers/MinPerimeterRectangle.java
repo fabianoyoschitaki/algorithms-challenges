@@ -43,15 +43,13 @@ public class MinPerimeterRectangle {
             return 4 * squareN;
         } 
         // it's a rectangle
-        else {
-            squareN += 1;
-            int biggestFactor = 1;
-            for (int i = 2; i < squareN; i++) {
-                if (N % i == 0) {
-                    biggestFactor = i;
-                }
+        squareN += 1;
+        int biggestFactor = 1;
+        for (int i = 2; i < squareN; i++) {
+            if (N % i == 0) {
+                biggestFactor = i;
             }
-            return biggestFactor * 2 + (N/biggestFactor) * 2;
         }
+        return (biggestFactor+(N/biggestFactor)) * 2;
     }
 }
