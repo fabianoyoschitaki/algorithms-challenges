@@ -9,31 +9,36 @@ public class MainReverseLinkedList {
 		printList(root);
 	}
 	
-	public static void printList(Node node){
-		StringBuffer sb = new StringBuffer();
-		if (node != null){	
-			sb.append(node.value);
-			while (node.next != null){
-				node = node.next;
-				sb.append("->").append(node.value);
-			}
-		}
-		System.out.println(sb.toString());
-	}
-	
+	/**
+	 * Reverse linked list
+	 * 
+	 * @param node
+	 * @return
+	 */
 	private static Node reverseList(Node node){
 		Node prev = null;
 		Node current = node;
 		Node next = null;
-		while (current != null){
-			next = current.next;
-			current.next = prev;
-			prev = current;
-			current = next;
+		while (current != null) {
+		    next = current.next;
+		    current.next = prev;
+		    prev = current;
+		    current = next;
 		}
-		node = prev;
-		return node;
+		return prev;
 	}
+	
+	public static void printList(Node node){
+        StringBuffer sb = new StringBuffer();
+        if (node != null){  
+            sb.append(node.value);
+            while (node.next != null){
+                node = node.next;
+                sb.append("->").append(node.value);
+            }
+        }
+        System.out.println(sb.toString());
+    }
 }
 
 class Node {
