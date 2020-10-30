@@ -1,5 +1,10 @@
 package com.leetcode.amazon.arraysandstrings;
 
+/**
+ * 
+ * @author fabiano
+ *
+ */
 public class LongestPalindromeSubstring {
     public static String longestPalindrome(String s) {
         String longestPalindrome = "";
