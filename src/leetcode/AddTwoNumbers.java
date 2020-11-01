@@ -1,4 +1,4 @@
-package com.leetcode.amazon.arraysandstrings;
+package leetcode;
 
 /**
  * https://leetcode.com/problems/add-two-numbers/submissions/

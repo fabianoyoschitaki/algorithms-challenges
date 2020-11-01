@@ -1,4 +1,4 @@
-package com.leetcode.amazon.arraysandstrings;
+package leetcode;
 
 import java.util.HashSet;
 import java.util.Set;
