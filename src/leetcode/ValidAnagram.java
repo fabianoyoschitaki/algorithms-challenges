@@ -20,11 +20,16 @@ public class ValidAnagram {
         
         // let's add letters of first string to counts and then remove from second string. result should be 0
         for (char c : s.toCharArray()){
-            counts[c-'a'] = counts[c-'a'] + 1;
+            counts[c-'a']++;
         }
         for (char c : t.toCharArray()){
-            counts[c-'a'] = counts[c-'a'] - 1;
+            counts[c-'a']--;
         }
+        
+//        for (int i = 0; i < s.length(); i++) {
+//            counts[s.charAt(i) - 'a']++;
+//            counts[t.charAt(i) - 'a']--;
+//        }
         
         // checking if any position of array is not 0 (s has more or less letter ? than t)
         for (int i : counts){

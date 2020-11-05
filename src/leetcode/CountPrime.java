@@ -23,7 +23,7 @@ public class CountPrime {
             if (primes[i]) {
                 System.out.println("Checking " + i + " because it's prime.");
                 for (int j = i; j * i < primes.length; j++) {
-                    System.out.println(i * j + " is not prime because it's multiple of " + i);
+                    System.out.println(i + "X" +  j + " is not prime because it's multiple of " + i);
                     primes[i * j] = false;
                 }
             } else {
