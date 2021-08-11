@@ -24,9 +24,12 @@ import java.util.List;
  *
  */
 public class Main3SumThreeSum {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		for (int i = 24; i < 47; i++) {
+		    System.out.println(",(1," + i + ",'ALL')");
+		    System.out.println(",(2," + i + ",'ACCOUNT')");
+		    System.out.println(",(3," + i + ",'OWN')");
+		}
 
 	}
 	
